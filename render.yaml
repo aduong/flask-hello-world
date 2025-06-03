@@ -1,0 +1,21 @@
+previews:
+  generation: automatic
+services:
+- type: worker
+  name: adr test worker
+  runtime: python
+  buildCommand: 'true'
+  startCommand: 'env && sleep infinity'
+  envVars:
+  - key: ADR_KV_CONN_STRING
+    fromService:
+      type: keyvalue
+      name: adr test kv
+      property: connectionString
+  - key: ADR_KV_PASSWORD
+    fromService:
+      type: keyvalue
+      name: adr test kv
+      property: password
+- type: keyvalue
+  name: adr test kv
