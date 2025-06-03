@@ -12,10 +12,5 @@ services:
       type: keyvalue
       name: adr test kv
       property: connectionString
-  - key: ADR_KV_PASSWORD
-    fromService:
-      type: keyvalue
-      name: adr test kv
-      property: password
 - type: keyvalue
   name: adr test kv
