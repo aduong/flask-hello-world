@@ -14,5 +14,6 @@ services:
       property: connectionString
 - type: keyvalue
   name: adr test kv
+  plan: pro max
   ipAllowList:
   - source: 0.0.0.0/0
